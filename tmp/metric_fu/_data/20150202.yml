@@ -1,0 +1,384 @@
+---
+:cane:
+  :total_violations: 4
+  :violations:
+    :line_style:
+    - :line: lib/Wealth/money.rb:1
+      :description: Line is >80 characters (83)
+    - :line: lib/Wealth/money.rb:13
+      :description: Line contains trailing whitespace
+    - :line: spec/Wealth/money_spec.rb:3
+      :description: Line contains trailing whitespace
+    :documentation:
+    - :description: No README found
+:churn:
+  :changes: []
+  :class_churn: []
+  :method_churn: []
+:flay:
+  :total_score: '0'
+  :matches: []
+:flog:
+  :total: 30.885067000923094
+  :average: 3.8606333751153867
+  :method_containers:
+  - :name: Money
+    :path: lib/Wealth/money.rb
+    :total_score: 26.735067000923095
+    :highest_score: 7.449999999999999
+    :average_score: 3.8192952858461564
+    :methods:
+      Money#to_s:
+        :operators:
+          :paise: 3.0
+          :lit_fixnum: 0.75
+          :/: 1.3
+          :%: 1.3
+          :puts: 1.1
+        :score: 7.449999999999999
+        :path: lib/Wealth/money.rb:24
+      Money#-:
+        :operators:
+          :paise: 1.5
+          :-: 1.3
+          :new: 1.1
+        :score: 3.9
+        :path: lib/Wealth/money.rb:12
+      Money#+:
+        :operators:
+          :paise: 1.5
+          :+: 1.3
+          :new: 1.1
+        :score: 3.9
+        :path: lib/Wealth/money.rb:8
+      Money#eql?:
+        :operators:
+          :paise: 2.6
+          :==: 1.1
+        :score: 3.7
+        :path: lib/Wealth/money.rb:21
+      Money#==:
+        :operators:
+          :paise: 2.6
+          :==: 1.1
+        :score: 3.7
+        :path: lib/Wealth/money.rb:17
+      Money#initialize:
+        :operators:
+          :assignment: 1.1
+          :lit_fixnum: 0.375
+          :*: 1.3
+          :+: 1.1
+        :score: 2.9850670009230953
+        :path: lib/Wealth/money.rb:4
+      Money#none:
+        :operators:
+          :attr_reader: 1.1
+        :score: 1.1
+        :path: 
+  - :name: main
+    :path: ''
+    :total_score: 4.15
+    :highest_score: 4.15
+    :average_score: 4.15
+    :methods:
+      main#none:
+        :operators:
+          :require: 1.0
+          :lit_fixnum: 0.75
+          :new: 1.3
+          :to_s: 1.1
+        :score: 4.15
+        :path: 
+:saikuro:
+  :files:
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: Money
+      :complexity: 6
+      :lines: 25
+      :methods:
+      - :name: Money#to_s
+        :complexity: 1
+        :lines: 2
+      - :name: Money#eql?
+        :complexity: 1
+        :lines: 2
+      - :name: Money#==
+        :complexity: 1
+        :lines: 2
+      - :name: Money#-
+        :complexity: 1
+        :lines: 3
+      - :name: Money#+
+        :complexity: 1
+        :lines: 2
+      - :name: Money#initialize
+        :complexity: 1
+        :lines: 2
+    :filename: lib/Wealth/money.rb
+  :classes:
+  - :name: Money
+    :complexity: 6
+    :lines: 25
+    :defs:
+    - :name: Money#initialize
+      :complexity: 1
+      :lines: 2
+    - :name: Money#+
+      :complexity: 1
+      :lines: 2
+    - :name: Money#-
+      :complexity: 1
+      :lines: 3
+    - :name: Money#==
+      :complexity: 1
+      :lines: 2
+    - :name: Money#eql?
+      :complexity: 1
+      :lines: 2
+    - :name: Money#to_s
+      :complexity: 1
+      :lines: 2
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  :methods:
+  - :name: Money#to_s
+    :complexity: 1
+    :lines: 2
+  - :name: Money#eql?
+    :complexity: 1
+    :lines: 2
+  - :name: Money#==
+    :complexity: 1
+    :lines: 2
+  - :name: Money#-
+    :complexity: 1
+    :lines: 3
+  - :name: Money#+
+    :complexity: 1
+    :lines: 2
+  - :name: Money#initialize
+    :complexity: 1
+    :lines: 2
+:reek:
+  :matches:
+  - :file_path: lib/Wealth/money.rb
+    :code_smells:
+    - :method: Money#to_s
+      :message: calls self.paise 2 times
+      :type: DuplicateMethodCall
+:roodi:
+  :total:
+  - Found 0 errors.
+  :problems: []
+:stats:
+  :codeLOC: 23
+  :testLOC: 14
+  :code_to_test_ratio: 0.6
+  :lines:
+  - :name: Libraries
+    :lines: 30
+    :loc: 23
+    :classes: 1
+    :methods: 3
+    :methods_per_class: 3
+    :loc_per_method: 5
+  - :name: Wealth specs
+    :lines: 17
+    :loc: 14
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Total
+    :lines: 47
+    :loc: 37
+    :classes: 1
+    :methods: 3
+    :methods_per_class: 3
+    :loc_per_method: 10
+:hotspots:
+  files:
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/Wealth/money.rb:24
+      file_name: lib/Wealth/money.rb
+      line_number: '24'
+      hash_key: '["lib/Wealth/money.rb:24", nil, nil]'
+    details:
+      flog: complexity is 7.4
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/Wealth/money.rb:12
+      file_name: lib/Wealth/money.rb
+      line_number: '12'
+      hash_key: '["lib/Wealth/money.rb:12", nil, nil]'
+    details:
+      flog: complexity is 3.9
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/Wealth/money.rb:8
+      file_name: lib/Wealth/money.rb
+      line_number: '8'
+      hash_key: '["lib/Wealth/money.rb:8", nil, nil]'
+    details:
+      flog: complexity is 3.9
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/Wealth/money.rb:17
+      file_name: lib/Wealth/money.rb
+      line_number: '17'
+      hash_key: '["lib/Wealth/money.rb:17", nil, nil]'
+    details:
+      flog: complexity is 3.7
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/Wealth/money.rb:21
+      file_name: lib/Wealth/money.rb
+      line_number: '21'
+      hash_key: '["lib/Wealth/money.rb:21", nil, nil]'
+    details:
+      flog: complexity is 3.7
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/Wealth/money.rb:4
+      file_name: lib/Wealth/money.rb
+      line_number: '4'
+      hash_key: '["lib/Wealth/money.rb:4", nil, nil]'
+    details:
+      flog: complexity is 3.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/Wealth/money.rb
+      file_name: lib/Wealth/money.rb
+      line_number: 
+      hash_key: '["lib/Wealth/money.rb", nil, nil]'
+    details:
+      reek: found 1 code smells
+  classes:
+  - location:
+      class_name: Money
+      method_name: 
+      file_path: lib/Wealth/money.rb:24
+      file_name: lib/Wealth/money.rb
+      line_number: '24'
+      hash_key: '["lib/Wealth/money.rb:24", "Money", nil]'
+    details:
+      flog: average complexity is 3.8
+      saikuro: average complexity is 1.0
+      reek: found 1 code smells
+  - location:
+      class_name: main
+      method_name: 
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "main", nil]'
+    details:
+      flog: complexity is 4.2
+  methods:
+  - location:
+      class_name: Money
+      method_name: Money#to_s
+      file_path: lib/Wealth/money.rb:24
+      file_name: lib/Wealth/money.rb
+      line_number: '24'
+      hash_key: '["lib/Wealth/money.rb:24", "Money", "Money#to_s"]'
+      simple_method_name: "#to_s"
+    details:
+      flog: complexity is 7.4
+      saikuro: complexity is 1.0
+      reek: found 1 code smells
+  - location:
+      class_name: Money
+      method_name: Money#-
+      file_path: lib/Wealth/money.rb:12
+      file_name: lib/Wealth/money.rb
+      line_number: '12'
+      hash_key: '["lib/Wealth/money.rb:12", "Money", "Money#-"]'
+      simple_method_name: "#-"
+    details:
+      flog: complexity is 3.9
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Money
+      method_name: Money#+
+      file_path: lib/Wealth/money.rb:8
+      file_name: lib/Wealth/money.rb
+      line_number: '8'
+      hash_key: '["lib/Wealth/money.rb:8", "Money", "Money#+"]'
+      simple_method_name: "#+"
+    details:
+      flog: complexity is 3.9
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Money
+      method_name: Money#eql?
+      file_path: lib/Wealth/money.rb:21
+      file_name: lib/Wealth/money.rb
+      line_number: '21'
+      hash_key: '["lib/Wealth/money.rb:21", "Money", "Money#eql?"]'
+      simple_method_name: "#eql?"
+    details:
+      flog: complexity is 3.7
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Money
+      method_name: Money#==
+      file_path: lib/Wealth/money.rb:17
+      file_name: lib/Wealth/money.rb
+      line_number: '17'
+      hash_key: '["lib/Wealth/money.rb:17", "Money", "Money#=="]'
+      simple_method_name: "#=="
+    details:
+      flog: complexity is 3.7
+      saikuro: complexity is 1.0
+  - location:
+      class_name: main
+      method_name: main#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "main", "main#none"]'
+      simple_method_name: "#none"
+    details:
+      flog: complexity is 4.2
+  - location:
+      class_name: Money
+      method_name: Money#initialize
+      file_path: lib/Wealth/money.rb:4
+      file_name: lib/Wealth/money.rb
+      line_number: '4'
+      hash_key: '["lib/Wealth/money.rb:4", "Money", "Money#initialize"]'
+      simple_method_name: "#initialize"
+    details:
+      flog: complexity is 3.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Money
+      method_name: Money#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "Money", "Money#none"]'
+      simple_method_name: "#none"
+    details:
+      flog: complexity is 1.1

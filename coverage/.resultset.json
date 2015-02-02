@@ -1,0 +1,42 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/kakulgupta/Desktop/RUBY/Finance/lib/Wealth.rb": [
+        1
+      ],
+      "/Users/kakulgupta/Desktop/RUBY/Finance/lib/Wealth/money.rb": [
+        null,
+        1,
+        1,
+        1,
+        44,
+        null,
+        null,
+        1,
+        6,
+        null,
+        null,
+        1,
+        null,
+        4,
+        null,
+        null,
+        1,
+        11,
+        9,
+        null,
+        null,
+        1,
+        0,
+        null,
+        1,
+        4,
+        null,
+        null,
+        null,
+        1
+      ]
+    },
+    "timestamp": 1422856266
+  }
+}
