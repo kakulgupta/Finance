@@ -80,10 +80,24 @@ describe 'Money' do
       		expect(money2).not_to eq(1)
     	end
     end
+
     describe 'sorting money' do
 
     	it 'should sort multiple values of money' do
     		expect([money1, money2, money3, money4].sort).to eq([money3, money1, money4, money2])
     	end
     end
+
+ 	describe 'comparing money' do
+
+ 		it 'should check larger of two values' do
+ 			expect(money1 > money2).to eq(false)
+ 		end
+
+ 		it 'should return larger of two values' do
+ 			expect(money1.larger(money2)).to eq(money2)
+ 		end
+ 
+	end
+
 end

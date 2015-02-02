@@ -1,6 +1,7 @@
 #Money takes in values in rupees and paise and adds it after converting it to paise
 class Money
   attr_reader :paise
+  include Comparable
     def initialize(rupees, paise)
       @paise = rupees*100 + paise
     end
@@ -29,6 +30,11 @@ class Money
     def <=>(other)
       @paise <=> other.paise
     end
+
+    def larger(other)
+      @paise>other.paise ? self : other
+    end
+    
 end
 
 Money.new(100,99).to_s
