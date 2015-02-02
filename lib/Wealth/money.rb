@@ -25,6 +25,10 @@ class Money
     def to_s
       "Rs #{(self.paise / 100) } & #{ ((self.paise % 100))} paise"
     end
+
+    def <=>(other)
+      @paise <=> other.paise
+    end
 end
 
 Money.new(100,99).to_s

@@ -6,7 +6,7 @@ describe 'Money' do
     let(:money2) { Money.new(55, 0) }
     let(:money3) { Money.new(0, 67) }
     let(:money4) { Money.new(45, 76) }
-
+ 
     describe 'represenation of money' do
 
         it 'viewing the money with both rupee and paise' do
@@ -78,6 +78,12 @@ describe 'Money' do
 
         it 'should compare money object with object of different Class' do
       		expect(money2).not_to eq(1)
+    	end
+    end
+    describe 'sorting money' do
+
+    	it 'should sort multiple values of money' do
+    		expect([money1, money2, money3, money4].sort).to eq([money3, money1, money4, money2])
     	end
     end
 end
